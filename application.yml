@@ -1,0 +1,12 @@
+spring:
+  mail:
+    host: smtp.yandex.ru
+    port: 587
+    username: q629536@yandex.ru
+    password: lzzgrupfqfjqeoty
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true
+
+server:
+  port: 8080
