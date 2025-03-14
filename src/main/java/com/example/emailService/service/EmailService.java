@@ -20,8 +20,7 @@ public class EmailService {
 
     public void sendEmail(EmailRequest request) {
         SimpleMailMessage message = new SimpleMailMessage();
-        message.setTo("AIPolozkov@1cbit.ru"); // Служебная почта
-        message.setFrom("q629536@yandex.ru"); // Отправитель
+        message.setTo("AIPolozkov@1cbit.ru");
         message.setSubject("Новый запрос от клиента");
         message.setText(emailBody.buildEmailBody(request));
 
