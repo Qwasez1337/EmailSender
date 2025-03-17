@@ -5,19 +5,19 @@ import lombok.Setter;
 import org.springframework.stereotype.Service;
 
 @Service
-public class EmailBody implements TextParser {
+public class MessageBody implements TextParser {
 
     @Override
-    public ParsedEmail parse(EmailRequest request) {
+    public ParsedMessage parseText(EmailRequest request) {
         String title = "Новый запрос от клиента";
         String body = "Организация: " + request.getOrganizationName() + "\n" +
                 "ИНН: " + request.getInn() + "\n" +
                 "Вопрос: " + request.getQuestion();
 
-        return new ParsedEmail(title, body);
+        return new ParsedMessage(title, body);
     }
 }
 
 interface TextParser {
-    ParsedEmail parse(EmailRequest request);
+    ParsedMessage parseText(EmailRequest request);
 }

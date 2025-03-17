@@ -1,8 +1,7 @@
 package com.example.emailService.controller;
 
 import com.example.emailService.model.EmailRequest;
-import com.example.emailService.service.EmailBody;
-import com.example.emailService.service.EmailService;
+import com.example.emailService.service.MessageService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -15,11 +14,11 @@ import org.springframework.mail.SimpleMailMessage;
 @RequestMapping("/api/emails")
 @RequiredArgsConstructor
 public class EmailController {
-    private final EmailService emailService;
+    private final MessageService messageService;
 
     @PostMapping
     public ResponseEntity<String> sendEmail(@RequestBody EmailRequest emailRequest) {
-        emailService.sendEmail(emailRequest);
+        messageService.sendMessage(emailRequest);
         return ResponseEntity.ok("Письмо отправлено!");
     }
 }
