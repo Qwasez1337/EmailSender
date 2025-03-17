@@ -19,12 +19,34 @@ public class EmailService {
     }
 
     public void sendEmail(EmailRequest request) {
-        SimpleMailMessage message = new SimpleMailMessage();
-        message.setTo("AIPolozkov@1cbit.ru");
-        message.setSubject("Новый запрос от клиента");
-        message.setText(emailBody.buildEmailBody(request));
 
-        mailSender.send(message);
+        ParsedEmail parsedEmail = emailBody.parse(request);
+        EmailSender emailSender = new EmailSender(parsedEmail);
+        mailSender.send(emailSender.send());
+
     }
 
 }
+
+interface MessageSender {
+    SimpleMailMessage send();
+}
+
+class EmailSender implements MessageSender{
+    ParsedEmail parsedEmail;
+
+    public EmailSender(ParsedEmail parsedEmail) {
+        this.parsedEmail = parsedEmail;
+    }
+
+    @Override
+    public SimpleMailMessage send() {
+        SimpleMailMessage message = new SimpleMailMessage();
+        message.setTo("AIPolozkov@1cbit.ru");
+        message.setSubject(parsedEmail.title());
+        message.setText(parsedEmail.body());
+        return message;
+    }
+
+}
+

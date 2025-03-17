@@ -1,6 +1,7 @@
 package com.example.emailService.controller;
 
 import com.example.emailService.model.EmailRequest;
+import com.example.emailService.service.EmailBody;
 import com.example.emailService.service.EmailService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

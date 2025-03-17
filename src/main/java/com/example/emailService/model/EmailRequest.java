@@ -2,6 +2,7 @@ package com.example.emailService.model;
 
 import java.util.List;
 
+// ClientData
 public class EmailRequest {
     private String organizationName;
     private String inn;
@@ -19,3 +20,6 @@ public class EmailRequest {
         return question;
     }
 }
+// CulToMailData
+// EmailCulRequest -Mapping-> EmailWarm {body, title}
+// EmailUzRequest -Mapping-> EmailWarm ->
