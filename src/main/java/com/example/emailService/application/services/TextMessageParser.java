@@ -13,6 +13,9 @@ public class TextMessageParser implements MessageParser {
         String title = "Новый запрос от клиента";
         String body = "Организация: " + problem.getOrganizationName() + "\n" +
                 "ИНН: " + problem.getInn() + "\n" +
+                "Контактное лицо: " + problem.getContactPersonName() + "\n" +
+                "Телефон: " + problem.getContactPhone() + "\n" +
+                "Email: " + problem.getContactEmail() + "\n" +
                 "Вопрос: " + problem.getQuestion();
 
         return new ProblemMessage(title, body);
