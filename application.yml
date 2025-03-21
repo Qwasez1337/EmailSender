@@ -1,12 +1,12 @@
 spring:
   mail:
-    host: smtp.yandex.ru
+    host: smtp.1cbit.ru
     port: 587
-    username: q629536@yandex.ru
-    password: lzzgrupfqfjqeoty
+    username: pbr\dor_tech
+    password: y@QvD%Z57gVJWzu3j
     properties:
       mail.smtp.auth: true
       mail.smtp.starttls.enable: true
-
+      mail.smtp.ssl.trust: smtp.1cbit.ru
 server:
   port: 8080

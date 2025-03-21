@@ -1,4 +1,5 @@
-package com.example.emailService.config;
+package com.example.emailService.adapters.configs;
+
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -34,6 +35,8 @@ public class MailConfig {
         Properties props = mailSender.getJavaMailProperties();
         props.put("mail.smtp.auth", "true");
         props.put("mail.smtp.starttls.enable", "true");
+        props.put("mail.smtp.ssl.trust", host);
+        props.put("mail.smtp.from", "dor_tech@1cbit.ru");
 
         return mailSender;
     }

@@ -1,0 +1,14 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+    command: ["mvn", "clean", "package", "spring-boot:run"]
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

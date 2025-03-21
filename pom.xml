@@ -8,11 +8,11 @@
 		<version>3.4.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.example</groupId>
-	<artifactId>emailService</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>emailService</name>
-	<description>email service </description>
+	<groupId>ru.firstbit.dor-tech</groupId>
+	<artifactId>message-service</artifactId>
+	<version>1.0.0</version>
+	<name>message-service</name>
+	<description>message service</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -38,11 +38,12 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-mail</artifactId>
+			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
+			<artifactId>spring-boot-starter-mail</artifactId>
 		</dependency>
 
 		<dependency>
