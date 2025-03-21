@@ -8,11 +8,11 @@
 		<version>3.4.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.example</groupId>
-	<artifactId>emailService</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>problemService</name>
-	<description>problem service</description>
+	<groupId>ru.firstbit.dor-tech</groupId>
+	<artifactId>message-service</artifactId>
+	<version>1.0.0</version>
+	<name>message-service</name>
+	<description>message service</description>
 	<url/>
 	<licenses>
 		<license/>
